@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="img/icon.ico" type="image/x-icon" rel="shortcut icon" />
+    <title>NIdle | 出售</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animation CSS -->
+    <link href="css/animate.min.css" rel="stylesheet">
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Table CSS-->
+    <link href="css/table.css" rel="stylesheet">
+    <style type="text/css">
+        .nav > li > a:focus, .nav > li > a:hover {
+            text-decoration: none;
+            background-color: white;
+        }
+        .nav-release:hover{
+            border-bottom: 3px solid #FF6A6A;
+        }
+        .nav-release-active{
+            border-bottom: 3px solid #FF6A6A;
+            color: #FF6A6A;
+        }
+        .nav > li.disabled > a {
+            background-color: #FF6A6A;
+            color: white;
+        }
+
+        .nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
+            color: white;
+            text-decoration: none;
+            cursor: not-allowed;
+            background-color: #FF6A6A;
+            background-color: transparent
+        }
+        .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+            background-color: #FF6A6A;
+            border-color: #337ab7
+        }
+        .dropdown-toggle:active{
+            text-decoration: none;
+        }
+        .dropdown-toggle:visited{
+            text-decoration: none;
+        }
+        .dropdown-toggle:hover{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body onload="tableshow()">
+<div class="navbar-wrapper" style="margin-top: 0;padding-top: 0;height:80px;z-index: 0;position: relative">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div id="navbar" class="navbar-collapse collapse" >
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a class="home_pic"  href="index.html">&nbsp&nbsp&nbsp&nbsp首页</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a>用户:GK.Hong</a></li>
+                    <li><a>我的收藏</a></li>
+                    <li><a>客户服务</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div style="width: 100%;height: 80px;background: #FF6A6A">
+    <div style="width: 80%;height: 80px;margin: 0 auto">
+        <div style="float:left;line-height: 80px;height: 60px;width: 6.5%">
+            <img src="img/logo2.png" width="100%" height="100%">
+        </div>
+        <div style="float:left;line-height: 80px;height: 60px;width: 6.5%;color: white;font-size: 30px;margin-left: 2%">
+            <p>出售</p>
+        </div>
+        <div style="float: left;width:30%;margin-left:45%;margin-top: 25px;margin-right: 0;padding-right: 0">
+            <input type="text" class="search-input_sell" style="float: left;width: 80%">
+            <div style="height: 30px;width: 10%;float: left;background: lightgrey">
+                <img src="img/search.png" width="50%" height="50%" style="margin:7px 25%">
+            </div>
+        </div>
+        <div class="dropdown" style="float: left;margin-left: 0;margin-top: 30px">
+            <span class="glyphicon glyphicon-align-justify" aria-hidden="true" style="color: white"></span>
+            <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="background-color: transparent;border: none;color: white">
+                分类
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="min-width: 50px;background-color: rgba(255,255,255,0.8);color: #909090">
+                <li ><a href="#">学校</a></li>
+                <li role="separator" class="divider"></li>
+                <li ><a href="#">种类</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div style="width: 100%;background: whitesmoke;">
+    <div style="width: 85%;margin: 0 auto;background: rgb(229,241,251);height: 60px;border: gainsboro solid 2px">
+        <div style="float:left;color:gray;font-size: 15px;line-height: 60px;margin-left: 5%">
+            <p>学校搜索:</p>
+        </div>
+        <div style="float: left;width: 10%">
+
+        </div>
+    </div>
+    <div style="width: 85%;margin: 0 auto;background: white;clear: both;border: gainsboro solid 2px">
+        <table>
+            <tbody id="test_tbody"></tbody>
+        </table>
+    </div>
+</div>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/pace.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/cbpAnimatedHeader.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/inspinia.js"></script>
+<script src="/try/bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script>
+<script src="/try/bootstrap/twitter-bootstrap-v2/docs/assets/js/application.js"></script>
+<script src="js/tablecreate.js"></script>
+</body>
+</html>
