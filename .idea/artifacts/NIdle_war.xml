@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="NIdle:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/NIdle_war</output-path>
+    <root id="archive" name="NIdle.war">
+      <element id="artifact" artifact-name="NIdle:war exploded" />
+    </root>
+  </artifact>
+</component>
