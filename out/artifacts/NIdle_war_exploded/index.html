@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Add Your favicon here -->
+    <!--<link rel="icon" href="img/favicon.ico">-->
+
+    <title>NIdle | 主页</title>
+
+    <link href="img/icon.ico" type="image/x-icon" rel="shortcut icon" />
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animation CSS -->
+    <link href="css/animate.min.css" rel="stylesheet">
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Table CSS-->
+    <link href="css/table.css" rel="stylesheet">
+    <style type="text/css">
+        .nav > li > a:focus, .nav > li > a:hover {
+            text-decoration: none;
+            color: white;
+            background-color: #FF6A6A;
+        }
+        .nav > li.disabled > a {
+            background-color: #FF6A6A;
+            color: #777777
+        }
+
+        .nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
+            color: #777777;
+            text-decoration: none;
+            cursor: not-allowed;
+            background-color: #FF6A6A;
+            background-color: transparent
+        }
+        .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+            background-color: #FF6A6A;
+            border-color: #337ab7
+        }
+        .nav-pills{
+            margin-top: 15px;
+            min-height: 40px;
+        }
+        .nav-pills > li {
+            float: left
+        }
+
+        .nav-pills > li > a {
+            color: #676a6c;
+            font-family: 'Open Sans', helvetica, arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 12px 12px 0 0;
+            padding:5px 30px;
+        }
+        .nav-pills > li + li {
+            margin-left: 0px
+        }
+        .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+            color: #fff;
+            background-color: #FF6A6A
+        }
+        .dropdown{
+            color: #fff;
+            font-family: 'Open Sans', helvetica, arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 12px 12px 0 0;
+            padding:0px 30px;
+            background-color: #FF6A6A
+        }
+
+        .dropdown-menu{
+            position: absolute;
+            background-color:#FF6A6A ;
+            padding: 0 0;
+            margin: 0 0;
+        }
+        .dropdown-menu > li >a{
+            display: block;
+            text-align: center;
+            color: white;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px;
+        }
+        .dropdown-menu > li >a:focus{
+            color: #FF6A6A;
+            background-color: white;
+        }
+        .dropdown-menu > li >a:hover{
+            color: #FF6A6A;
+            background-color: white;
+        }
+        .dropdown-menu.divider{
+            height: 5px;
+        }
+
+    </style>
+</head>
+<body id="page-top" onload="tableshow()">
+<!--
+标题栏，固定
+-->
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div id="navbar" class="navbar-collapse collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" >您好，请登录</a></li>
+                    <li><a class="page-scroll" >注册</a></li>
+                    <li><a class="page-scroll" >我的收藏</a></li>
+                    <li><a class="page-scroll" >客户服务</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div id="indexBg" style="background: url('img/home_pic1.png');height:750px;background-size: 100% 100%">
+    <div style="background: white;height: 200px;width: 70%;margin: 0 auto">
+        <div style="padding-top: 75px">
+            <div style="float: left;padding-left: 50px;padding-top: 10px">
+                <img src="img/logo1.png" style="height:70px;width: 100px">
+            </div>
+            <div style="float: left;height: 60px;padding-left: 20px;padding-top: 20px">
+                <p style="color: #FF6A6A;font-size: 35px">Nidle</p>
+            </div>
+            <div style="float: left;padding-left: 100px;padding-top: 25px">
+                <input class="search-input" type="text" style="float: left ">
+                <div class="search-submit" style="float: left">
+                    <img src="img/search.png" height="75%" width="70%" style="padding-top: 20%;padding-left: 25%">
+                </div>
+            </div>
+        </div>
+        <div class="container" style="clear: both">
+            <div class="row" >
+                <div class="span6" >
+                    <ul class="nav nav-pills" >
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: white">出售推荐<b class="caret"></b></a>
+                            <ul class="dropdown-menu" style="min-width: 100%;">
+                                <li><a href="#">推荐一</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">推荐二</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">推荐三</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">推荐四</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">推荐五</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">推荐六</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">推荐七</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">推荐八</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">返回顶部</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="sell.html" >出售</a></li>
+                        <li><a href="purse.html" >求购</a></li>
+                        <li><a href="send.html" >赠送</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width: 70%;margin: 0 auto;height:470px;background-color: #F5F5F5" >
+        <div id="inSlider" class="carousel slide carousel-fade" data-ride="carousel" style="width: 75% ;float: left;margin-top: 10px;margin-left: 2%">
+            <!--轮播指标-->
+            <ol class="carousel-indicators">
+                <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+                <li data-target="#inSlider" data-slide-to="1"></li>
+                <li data-target="#inSlider" data-slide-to="2"></li>
+            </ol>
+            <!--轮播项目-->
+            <div class="carousel-inner" role="listbox">
+                <div id="carousel1" class="item active">
+
+                    <!-- Set background for slide in css -->
+                    <div class="header-back one"></div>
+
+                </div>
+                <div id="carousel2" class="item">
+
+                    <!-- Set background for slide in css -->
+                    <div class="header-back two"></div>
+                </div>
+                <div id="carousel3" class="item">
+
+                    <!-- Set background for slide in css -->
+                    <div class="header-back three"></div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div style="margin: 0 2%;float: left;width: 19%">
+            <div style="margin-top: 10px;height: 145px">
+                <img src="img/carousel_pic1.jpg" height="100%" width="100%">
+            </div>
+            <div style="margin-top:10px;height: 145px">
+                <img src="img/carousel_pic2.jpg" height="100%" width="100%">
+            </div>
+            <div style="margin-top: 10px;height: 140px">
+                <img src="img/carousel_pic3.jpg" height="100%" width="100%">
+            </div>
+        </div>
+    </div>
+    <div style="width: 10%;font-size: 25px;color: white;margin: 0 auto;clear: both">
+        <p style="height:30px;padding-top: 20px">出售推荐</p>
+    </div>
+
+</div>
+
+<div style="width: 100%;background: whitesmoke;">
+    <div style="width: 85%;margin: 0 auto;background: white">
+        <table>
+            <tbody id="test_tbody"></tbody>
+        </table>
+    </div>
+</div>
+
+<div>
+    <section id="contact" class="gray-section contact">
+        <div class="container">
+            <div class="row m-b-lg">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>联系我们</h1>
+                    <p>邮箱：NIDle_Team@163.com </p>
+                </div>
+            </div>
+            <div class="row m-b-lg">
+                <div class="col-lg-3 col-lg-offset-3">
+                    <address>
+                        <strong><span class="navy">开发团队：find 200 OK</span></strong><br/>
+                    </address>
+                </div>
+                <div class="col-lg-4">
+                    <p class="text-color">
+                        我们诚挚的感谢您的使用,欢迎您为我们的网站提供修改的意见
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="mailto:NIDle_Team@163.com " class="btn btn-primary">向我们发送邮件</a>
+                    <p class="m-t-sm">
+                        或者关注我们的其他社交媒体
+                    </p>
+                    <ul class="list-inline social-icon">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                    <p><strong>&copy; Copyright Reserved 2021 Find 200 OK</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/pace.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/cbpAnimatedHeader.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/inspinia.js"></script>
+<script src="/try/bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script>
+<script src="/try/bootstrap/twitter-bootstrap-v2/docs/assets/js/application.js"></script>
+<script src="js/tablecreate.js"></script>
+</body>
+</html>
+<script>
+
+</script>

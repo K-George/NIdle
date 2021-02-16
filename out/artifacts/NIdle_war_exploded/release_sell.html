@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="img/icon.ico" type="image/x-icon" rel="shortcut icon" />
+    <title>NIdle | 发布出售</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animation CSS -->
+    <link href="css/animate.min.css" rel="stylesheet">
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <style type="text/css">
+        .nav > li > a:focus, .nav > li > a:hover {
+            text-decoration: none;
+            background-color: white;
+        }
+        .nav-release:hover{
+            border-bottom: 3px solid #FF6A6A;
+        }
+        .nav-release-active{
+            border-bottom: 3px solid #FF6A6A;
+            color: #FF6A6A;
+        }
+        .nav > li.disabled > a {
+            background-color: #FF6A6A;
+            color: white;
+        }
+
+        .nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
+            color: white;
+            text-decoration: none;
+            cursor: not-allowed;
+            background-color: #FF6A6A;
+            background-color: transparent
+        }
+        .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+            background-color: #FF6A6A;
+            border-color: #337ab7
+        }
+        .nav-pills{
+            margin-top: 15px;
+            min-height: 40px;
+        }
+        .nav-pills > li {
+            float: left
+        }
+
+        .nav-pills > li > a {
+            color: #909090;
+            font-family: 'Open Sans', helvetica, arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 12px 12px 0 0;
+            padding:5px 30px;
+        }
+        .text-release{
+            font-size: 15px;
+            width: 60%;
+            border: 2px solid #909090 ;
+            height: 30px;
+            border-radius: 5px 5px 5px 5px;
+            caret-color: blue;
+            outline: none;
+            margin-top: 4%;
+            resize: none;
+
+        }
+        .text-release:focus{
+            border: 2px solid rgb(229,241,251);
+            -moz-box-shadow: 0px 0px 10px  rgb(229,220,251) ;/*firefox*/
+            -webkit-box-shadow: 0px 0px 10px rgb(229,241,251) ;/*safari或chrome*/
+            box-shadow:0px 0px 10px rgb(229,241,251) ;/*opera或ie9*/
+        }
+        .p-release{
+            font-size: 15px;
+            color: black;
+            margin-left: 25%;
+            padding-top: 12.5%;
+        }
+        .re-pic-a{
+            color: #909090;
+            position:absolute;
+            margin-top: 170px;
+            margin-left:30%;
+            height: 10px;
+            width: 170px;
+            z-index: 2;
+            display: none;
+            text-decoration: none;
+        }
+        .re-pic-a:hover{
+            color: #FF6A6A;
+            text-decoration: none;
+        }
+        .re-pic-a:active,.re-pic-a:focus{
+            color: #909090;
+            text-decoration: none;
+        }
+        .home_pic{
+            background: url('img/home.png') no-repeat left ;
+            background-size: 35% 40%;
+        }
+        .home_pic:hover{
+            background: url('img/home_red.png') no-repeat left ;
+            background-size: 35% 40%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="navbar-wrapper" style="margin-top: 0;padding-top: 0;z-index: 0">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+
+            <div id="navbar" class="navbar-collapse collapse" >
+                <ul class="nav navbar-nav navbar-left" style="margin-left: 10%">
+                    <li><a class="home_pic"  href="index.html">&nbsp&nbsp&nbsp&nbsp首页</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a>用户:GK.Hong</a></li>
+                    <li><a>我的收藏</a></li>
+                    <li><a>客户服务</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div style="margin-top: 75px;width: 100%;height: 80px;background-color: #FF6A6A">
+    <div style="float: left;padding-left: 50px;padding-top: 5px">
+        <img src="img/logo2.png" style="height:70px;width: 100px">
+    </div>
+    <div style="float: left;height: 70px;padding-left: 20px;padding-top: 20px">
+        <p style="color: white;font-size: 30px">发布</p>
+    </div>
+</div>
+
+<div class="container" style="clear: both;width: 100%">
+    <div class="row" >
+        <div class="span6" >
+            <ul class="nav nav-pills" >
+                <li style="padding-left: 10%"><a href="release_sell.html" class="nav-release nav-release-active">出售</a></li>
+                <li><a href="release_purse.html" class="nav-release">求购</a></li>
+                <li><a href="release_send.html" class="nav-release">赠送</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div style="width: 100%;height: 1000px;background-color: #F5F5F5;">
+    <div style="width: 80%;height:800px;margin: 0 auto;background-color: white;-moz-box-shadow: 0px 5px 5px -5px #909090 inset;/*firefox*/-webkit-box-shadow: 0px 5px 5px -5px #909090 inset;/*safari或chrome*/box-shadow:0px 5px 5px -5px #909090 inset;/*opera或ie9*/">
+        <div style="width: 80%;height: 5px;margin: 0 auto"></div>
+        <div style="width: 80%;height:90%;margin: 0 auto ;border: 2px solid gainsboro">
+            <div style="width: 100%;height: 8%;align-items:center;border-bottom: 2px solid gainsboro;color: gray;font-size: 15px;background-color: rgb(229,241,251)">
+                <p style="margin-left: 5%;padding-top: 2%">
+                    发布内容
+                </p>
+            </div>
+            <div style="width: 20%;float:left;">
+                <p class="p-release">
+                    物品名称:
+                </p>
+                <p class="p-release" >
+                    物品信息描述:
+                </p>
+                <p class="p-release" style="padding-top: 80%">
+                    物品图片:
+                </p>
+                <p class="p-release" style="padding-top: 80%">
+                    预售价格(元):
+                </p>
+                <p class="p-release">
+                    联系方式:
+                </p>
+            </div>
+            <div style="width: 50%;float:left;">
+                <textarea id="name_text" class="text-release" placeholder="请输入物品名称(20个字符以内)" onfocus="this.placeholder=''" onblur="this.placeholder='请输入物品名称(20个字符以内)'"></textarea>
+                <textarea id="info_text" class="text-release" style="height: 170px;width:100%;" placeholder="请输入物品的详细描述" onfocus="this.placeholder=''" onblur="this.placeholder='请输入物品的详细描述'"></textarea>
+                <div style="width: 170px;height: 170px;margin-top: 2%;position: relative;z-index: 1">
+                    <img id="input-pic-img" src="img/select_pic.png" alt="" style="position:absolute;margin:0 0;height: 170px;width: 170px;z-index: 2" >
+                    <input id="file_uploader_tmp" type="file" style="position:absolute;opacity: 0;height: 170px;width: 170px;z-index: 3" accept="image/*" onchange="TempUploadImg(this)">
+                    <a href="javascript:void(0);" id="re-pic" class="re-pic-a">重新选择</a>
+                </div>
+                <textarea id="price_text" class="text-release" placeholder="请输入您预出售的价格(单位:元)" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您预出售的价格(单位:元)'"></textarea>
+                <textarea id="contract_text" class="text-release" placeholder="请输入您的联系方式(QQ或者手机)" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的联系方式(QQ或者手机)'"></textarea>
+            </div>
+            <div class="row" >
+                <div class="col-lg-12 text-center" style="padding-top: 5%">
+                    <a href="javascript:void(0);" class="btn btn-primary">&nbsp&nbsp&nbsp&nbsp提交&nbsp&nbsp&nbsp&nbsp</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/pace.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/cbpAnimatedHeader.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/inspinia.js"></script>
+
+<script>
+    //预览图片
+    function TempUploadImg(obj) {
+        var file = obj.files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {    //成功读取文件
+            var img = document.getElementById("input-pic-img");
+            img.src = e.target.result;   //或 img.src = this.result / e.target == this
+        };
+        //在选择过一次图片后，显示重新选择的选项
+        var xmTanDownload =  document.getElementById("re-pic");
+        xmTanDownload.style.display="inline"
+    }
+    $('#re-pic').click(function () {
+        $('#file_uploader_tmp').click();
+    })
+
+</script>

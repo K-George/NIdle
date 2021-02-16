@@ -1,0 +1,84 @@
+/*
+ *
+ *   表格CSS
+ *   Copyright 2021 George Zhou
+ *
+*/
+.mask{
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    background: whitesmoke;
+    opacity: 0;
+}
+.mask:hover{
+    opacity: 1;
+}
+.mask_img{
+    width: 90%;
+    height:70%;
+    margin: 0 auto;
+    padding-top: 5%;
+    position: relative;
+}
+.mask_img:hover .mask{
+    opacity: 0.5;
+}
+.mask_text{
+    width: 90%;
+    margin: 3% auto;
+    font-size: 15px;
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
+}
+.mask_text:hover{
+    color: #FF6A6A;
+}
+.mask_price{
+    width: 90%;
+    color: #FF6A6A;
+    margin:3% auto;
+    font-size: 15px;
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
+}
+.mask_price_img{
+    float: left;
+    width: 5%;
+    height: 5%;
+}
+.mask_price_text{
+    float: left;
+    width: 80%;
+    height: 5%;
+    margin-top: 1%;
+    margin-left: 5%;
+}
+.mask_collect{
+    clear: both;
+    width: 6%;
+    height: 5%;
+    margin-left: 4.5%;
+    background: url("../img/collect_logo.png") no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.mask_collect_active{
+    clear: both;
+    width: 6%;
+    height: 5%;
+    margin-left: 4.5%;
+    background: url("../img/collect_logo_red.png") no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.mask_container{
+    width: 95%;
+    height:320px;
+    background: white;
+    margin-top: 5%;
+    margin-left: 2.5%;
+    border: #9d9d9d solid 1px;
+    border-radius: 5px 5px 5px 5px;
+}
+.mask_container:hover{
+    border: #FF6A6A solid 1px;
+}
