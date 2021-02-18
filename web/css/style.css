@@ -188,6 +188,18 @@ SERACH STYLE
   outline: none;
   border: 0px;
 }
+.search-input_sell_school{
+  border-radius: 5px 5px 5px 5px;
+  font-size: 15px;
+  width: 100%;
+  height: 30px;
+  border: lightgray solid 2px;
+  outline: none;
+}
+.search-input_sell_school:focus{
+  caret-color: #FF6A6A;
+  outline: none;
+}
 .search-submit{
   border: 0;
   outline: none;
