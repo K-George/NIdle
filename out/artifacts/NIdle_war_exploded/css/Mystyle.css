@@ -1,0 +1,98 @@
+.navbar {
+    min-height: 30px;
+    margin-bottom: 0px;
+}
+.nav > li > a {
+    padding: 8px 15px;
+}
+.navbar .container-fluid .navbar-brand {
+    margin-left: 185px;
+    padding: 8px 15px;
+}
+.container-fluid{
+    height: 30px;
+}
+.navbar-header{
+    height: 30px;
+}
+.navbar-nav{
+    float: right;
+    margin-right: 185px;
+}
+.home-pic{
+    width: 30px;
+    height: 30px;
+}
+.header{
+    height: 70px;
+    background-color: #ff4c4f;
+}
+
+.header-img{
+    margin-left: 210px;
+}
+
+.header-info{
+    display: inline-block;
+    height: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.header-info a{
+    color: white;
+    font-size: large;
+    text-decoration:none;
+}
+
+.container .inside{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: -15px;
+}
+
+
+
+
+.first{
+    width: 850px;
+    height: 50px;
+    border: 1px solid darkgrey;
+    padding-top: 1px;
+    margin-top: 5px;
+    background-color: #d9edf761;
+}
+
+.second{
+    width: 850px;
+    height: 250px;
+    border-left: 1px solid darkgrey;
+    border-right: 1px solid darkgrey;
+    padding-left: 150px;
+}
+.round-icon{
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+.round_icon{
+    border-radius: 30px;
+    width:60px;
+    height:60px;
+    border: 1px solid #cbd8d0;
+}
+
+.third{
+    width: 850px;
+    height: 250px;
+    border: 1px solid darkgrey;
+    padding-left: 150px;
+    padding-top: 20px;
+}
+
+select {
+    width: 120px;
+    height: 30px;
+}
+
+
+
