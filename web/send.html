@@ -177,12 +177,7 @@
                 &nbsp
             </button>
         </div>
-        <div style="float: left;margin-left: 2%;margin-top: 15px">
-            <button id="price_sort_btn" class="sort">&nbsp&nbsp价格&nbsp
-                <span id="price_sort_span" class="glyphicon glyphicon-arrow-down" style="color: #9d9d9d"></span>
-                &nbsp
-            </button>
-        </div>
+
         <div style="float: right;margin-right: 2%;margin-top: 20px">
             <span id="pull_up" class="glyphicon glyphicon-resize-small" style="color: red;font-size: 20px"></span>
         </div>
@@ -220,13 +215,6 @@
             $("#collect_sort_span").attr("class","glyphicon glyphicon-arrow-up");
         }else{
             $("#collect_sort_span").attr("class","glyphicon glyphicon-arrow-down");
-        }
-    })
-    $("#price_sort_btn").click(function () {
-        if($("#price_sort_span").hasClass("glyphicon glyphicon-arrow-down")){
-            $("#price_sort_span").attr("class","glyphicon glyphicon-arrow-up");
-        }else{
-            $("#price_sort_span").attr("class","glyphicon glyphicon-arrow-down");
         }
     })
 </script>
