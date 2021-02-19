@@ -87,9 +87,19 @@
             left: -50%;
             display: none
         }
+        .sort{
+            border-radius: 5px 5px 5px 5px;
+            border: #9d9d9d solid 1px;
+            background-color: white;
+            height: 30px;
+            color: #9d9d9d;
+        }
+        .sort:active,.sort:focus{
+            outline: none;
+        }
     </style>
 </head>
-<body onload="tableshow()">
+<body onload="tableshowsell()">
 <!--标题栏-->
 <div class="navbar-wrapper" style="margin-top: 0;padding-top: 0;height:80px;z-index: 0;position: relative">
     <nav class="navbar navbar-default" role="navigation">
@@ -160,10 +170,21 @@
                     <option>=请选择学校=</option>
                 </select>
             </div>
-
         </div>
-        <div style="float: left;width: 15%;margin-left: 2%;">
-
+        <div style="float: left;margin-left: 2%;margin-top: 15px">
+            <button id="collect_sort_btn" class="sort">&nbsp&nbsp收藏&nbsp
+                <span id="collect_sort_span" class="glyphicon glyphicon-arrow-down" style="color: #9d9d9d"></span>
+                &nbsp
+            </button>
+        </div>
+        <div style="float: left;margin-left: 2%;margin-top: 15px">
+            <button id="price_sort_btn" class="sort">&nbsp&nbsp价格&nbsp
+                <span id="price_sort_span" class="glyphicon glyphicon-arrow-down" style="color: #9d9d9d"></span>
+                &nbsp
+            </button>
+        </div>
+        <div style="float: right;margin-right: 2%;margin-top: 20px">
+            <span id="pull_up" class="glyphicon glyphicon-resize-small" style="color: red;font-size: 20px"></span>
         </div>
     </div>
     <div style="width: 85%;margin: 0 auto;background: white;clear: both;border: gainsboro solid 2px">
@@ -187,7 +208,25 @@
 </body>
 </html>
 <script>
+    /*切换学校分类栏的状态*/
     $("#school_choice").click(function () {
-        $("#type_school").toggle();
+        $("#type_school").show();//显示
+    })
+    $("#pull_up").click(function () {
+        $("#type_school").hide();//隐藏
+    })
+    $("#collect_sort_btn").click(function () {
+        if($("#collect_sort_span").hasClass("glyphicon glyphicon-arrow-down")){
+            $("#collect_sort_span").attr("class","glyphicon glyphicon-arrow-up");
+        }else{
+            $("#collect_sort_span").attr("class","glyphicon glyphicon-arrow-down");
+        }
+    })
+    $("#price_sort_btn").click(function () {
+        if($("#price_sort_span").hasClass("glyphicon glyphicon-arrow-down")){
+            $("#price_sort_span").attr("class","glyphicon glyphicon-arrow-up");
+        }else{
+            $("#price_sort_span").attr("class","glyphicon glyphicon-arrow-down");
+        }
     })
 </script>
