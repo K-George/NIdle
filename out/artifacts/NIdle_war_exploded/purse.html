@@ -6,6 +6,7 @@
     <title>NIdle | 求购</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">-->
 
     <!-- Animation CSS -->
     <link href="css/animate.min.css" rel="stylesheet">
@@ -16,24 +17,216 @@
     <link href="css/style.css" rel="stylesheet">
     <!--Table CSS-->
     <link href="css/table.css" rel="stylesheet">
+    <style type="text/css">
+        .nav > li > a:focus, .nav > li > a:hover {
+            text-decoration: none;
+            background-color: white;
+        }
+        .nav-release:hover{
+            border-bottom: 3px solid #FF6A6A;
+        }
+        .nav-release-active{
+            border-bottom: 3px solid #FF6A6A;
+            color: #FF6A6A;
+        }
+        .nav > li.disabled > a {
+            background-color: #FF6A6A;
+            color: white;
+        }
+
+        .nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
+            color: white;
+            text-decoration: none;
+            cursor: not-allowed;
+            background-color: #FF6A6A;
+            background-color: transparent
+        }
+        .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+            background-color: #FF6A6A;
+            border-color: #337ab7
+        }
+        .dropdown-toggle:active{
+            text-decoration: none;
+        }
+        .dropdown-toggle:visited{
+            text-decoration: none;
+        }
+        .dropdown-toggle:hover{
+            text-decoration: none;
+        }
+        .school_select{
+            float: left;
+            width: 30%;
+            border: none;
+            height: 30px;
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+        }
+        .school_select:hover{
+            border: none;
+            outline: none;
+        }
+        .school_select:focus{
+            border: none;
+            outline: none;
+        }
+        .school_select:active{
+            border: none;
+            outline: none;
+        }
+        .school_select_table{
+            width: 200%;
+            height:200px;
+            margin-top: 5px;
+            background-color: white;
+            border: #9d9d9d solid 1px;
+            position: absolute;
+            z-index: 10;
+            top:40px;
+            left: -50%;
+            display: none
+        }
+        .sort{
+            border-radius: 5px 5px 5px 5px;
+            border: #9d9d9d solid 1px;
+            background-color: white;
+            height: 30px;
+            color: #9d9d9d;
+        }
+        .sort:active,.sort:focus{
+            outline: none;
+        }
+    </style>
 </head>
-<body>
-<div class="navbar-wrapper" style="margin-top: 0;padding-top: 0;z-index: 0">
+<body onload="tableshowpurse()">
+<!--标题栏-->
+<div class="navbar-wrapper" style="margin-top: 0;padding-top: 0;height:80px;z-index: 0;position: relative">
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
-
             <div id="navbar" class="navbar-collapse collapse" >
                 <ul class="nav navbar-nav navbar-left">
                     <li><a class="home_pic"  href="index.html">&nbsp&nbsp&nbsp&nbsp首页</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a>用户:GK.Hong</a></li>
-                    <li><a>我的收藏</a></li>
+                    <li><a href="user_center.jsp">用户:GK.Hong</a></li>
+                    <li><a href="collection.jsp">我的收藏</a></li>
                     <li><a>客户服务</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 </div>
+<!--搜索分类栏-->
+<div style="width: 100%;height: 80px;background: #FF6A6A">
+    <div style="width: 80%;height: 80px;margin: 0 auto">
+        <div style="float:left;line-height: 80px;height: 60px;width: 6.5%">
+            <img src="img/logo2.png" width="100%" height="100%">
+        </div>
+        <div style="float:left;line-height: 80px;height: 60px;width: 6.5%;color: white;font-size: 30px;margin-left: 2%">
+            <p>求购</p>
+        </div>
+        <div style="float: left;width:30%;margin-left:45%;margin-top: 25px;margin-right: 0;padding-right: 0">
+            <input type="text" class="search-input_sell" style="float: left;width: 80%">
+            <div style="height: 30px;width: 10%;float: left;background: lightgrey">
+                <img src="img/search.png" width="50%" height="50%" style="margin:7px 25%">
+            </div>
+        </div>
+        <div class="dropdown" style="float: left;margin-left: 0;margin-top: 30px">
+            <span class="glyphicon glyphicon-align-justify" aria-hidden="true" style="color: white"></span>
+            <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="background-color: transparent;border: none;color: white">
+                分类
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="min-width: 50px;background-color: rgba(255,255,255,0.8);color: #909090">
+                <li ><a href="#" id="school_choice">学校</a></li>
+                <li role="separator" class="divider"></li>
+                <li ><a href="#" id="type_choice">种类</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--分类栏-->
+<div style="width: 100%;background: whitesmoke;">
+    <div id="type_school" style="width: 85%;margin: 0 auto;background: rgb(229,241,251);height: 60px;border: gainsboro solid 2px;display: none">
+        <div style="float:left;color:gray;font-size: 15px;line-height: 60px;margin-left: 5%">
+            <p>学校搜索:</p>
+        </div>
+        <div style="float: left;width: 15%;margin-left: 2%;position: relative;margin-top: 15px">
+            <input type="text" class="search-input_sell_school" value="" id="school-show">
+
+            <span id="search_sell_logo" class="glyphicon glyphicon-chevron-down" style="color: red;position: absolute;top: 10px;right: 5%;"></span>
+            <div id="schoolSelectTable" class="school_select_table">
+                <select id="prov" onchange="showCity(this)" class="school_select">
+                    <option>=请选择省份=</option>
+                </select>
+
+                <!--城市选择-->
+                <select id="city" onchange="showSchool(this)" class="school_select">
+                    <option>=请选择城市=</option>
+                </select>
+
+                <!--县区选择-->
+                <select id="school" onchange="selecSchool(this)" class="school_select" style="width: 40%">
+                    <option>=请选择学校=</option>
+                </select>
+            </div>
+        </div>
+        <div style="float: left;margin-left: 2%;margin-top: 15px">
+            <button id="collect_sort_btn" class="sort">&nbsp&nbsp收藏&nbsp
+                <span id="collect_sort_span" class="glyphicon glyphicon-arrow-down" style="color: #9d9d9d"></span>
+                &nbsp
+            </button>
+        </div>
+        <div style="float: left;margin-left: 2%;margin-top: 15px">
+            <button id="price_sort_btn" class="sort">&nbsp&nbsp价格&nbsp
+                <span id="price_sort_span" class="glyphicon glyphicon-arrow-down" style="color: #9d9d9d"></span>
+                &nbsp
+            </button>
+        </div>
+        <div style="float: right;margin-right: 2%;margin-top: 20px">
+            <span id="pull_up" class="glyphicon glyphicon-resize-small" style="color: red;font-size: 20px"></span>
+        </div>
+    </div>
+    <div style="width: 85%;margin: 0 auto;background: white;clear: both;border: gainsboro solid 2px">
+        <table>
+            <tbody id="test_tbody"></tbody>
+        </table>
+    </div>
+</div>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/pace.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/cbpAnimatedHeader.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/inspinia.js"></script>
+<script src="js/tablecreate.js"></script>
+<script src="js/school.js"></script>
+<script src="js/school_select_method.js"></script>
+<!--<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </body>
 </html>
+<script>
+    /*切换学校分类栏的状态*/
+    $("#school_choice").click(function () {
+        $("#type_school").show();//显示
+    })
+    $("#pull_up").click(function () {
+        $("#type_school").hide();//隐藏
+    })
+    $("#collect_sort_btn").click(function () {
+        if($("#collect_sort_span").hasClass("glyphicon glyphicon-arrow-down")){
+            $("#collect_sort_span").attr("class","glyphicon glyphicon-arrow-up");
+        }else{
+            $("#collect_sort_span").attr("class","glyphicon glyphicon-arrow-down");
+        }
+    })
+    $("#price_sort_btn").click(function () {
+        if($("#price_sort_span").hasClass("glyphicon glyphicon-arrow-down")){
+            $("#price_sort_span").attr("class","glyphicon glyphicon-arrow-up");
+        }else{
+            $("#price_sort_span").attr("class","glyphicon glyphicon-arrow-down");
+        }
+    })
+</script>
