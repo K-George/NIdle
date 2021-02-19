@@ -7,7 +7,7 @@
   <!-- 引入样式表-->
   <link rel="stylesheet" href="css/SignUp.css"/>
   <link href="img/icon.ico" type="image/x-icon" rel="shortcut icon" />
-  <title>注册页面</title>
+  <title>NIdle | 注册</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
