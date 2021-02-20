@@ -33,7 +33,6 @@
             background-color: #FF6A6A;
             color: white;
         }
-
         .nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
             color: white;
             text-decoration: none;
@@ -132,7 +131,7 @@
                 <img src="img/search.png" width="50%" height="50%" style="margin:7px 25%">
             </div>
         </div>
-        <div class="dropdown" style="float: left;margin-left: 0;margin-top: 30px">
+        <div id="dropdown_menu_choice" class="dropdown" style="float: left;margin-left: 0;margin-top: 30px">
             <span class="glyphicon glyphicon-align-justify" aria-hidden="true" style="color: white"></span>
             <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="background-color: transparent;border: none;color: white">
                 分类
@@ -147,7 +146,8 @@
 </div>
 <!--分类栏-->
 <div style="width: 100%;background: whitesmoke;">
-    <div id="type_school" style="width: 85%;margin: 0 auto;background: rgb(229,241,251);height: 60px;border: gainsboro solid 2px;display: none">
+    <!--学校分类栏-->
+    <div id="type_school" style="width: 85%;margin: 0 auto;background: whitesmoke;height: 60px;border: gainsboro solid 2px;display: none">
         <div style="float:left;color:gray;font-size: 15px;line-height: 60px;margin-left: 5%">
             <p>学校搜索:</p>
         </div>
@@ -177,9 +177,30 @@
                 &nbsp
             </button>
         </div>
-
+        <div style="float: left;margin-left: 2%;margin-top: 15px">
+            <button id="price_sort_btn" class="sort">&nbsp&nbsp价格&nbsp
+                <span id="price_sort_span" class="glyphicon glyphicon-arrow-down" style="color: #9d9d9d"></span>
+                &nbsp
+            </button>
+        </div>
         <div style="float: right;margin-right: 2%;margin-top: 20px">
             <span id="pull_up" class="glyphicon glyphicon-resize-small" style="color: red;font-size: 20px"></span>
+        </div>
+    </div>
+    <!--种类分类栏-->
+    <div id="type_type" style="width: 85%;margin: 0 auto;background: whitesmoke;height: 60px;border: gainsboro solid 2px;display: none">
+        <div style="float:left;color:gray;font-size: 15px;line-height: 60px;margin-left: 1%">
+            <span class="glyphicon glyphicon-align-justify" aria-hidden="true" style="color: grey;float: left;font-size: 15px;margin-top: 22.5px"></span>
+            <p style="float: left">&nbsp&nbsp菜单</p>
+        </div>
+        <div style="float: left;margin-left: 35%;margin-top: 15px">
+            <button id="collect_sort_btn2" class="sort">&nbsp&nbsp收藏&nbsp
+                <span id="collect_sort_span2" class="glyphicon glyphicon-arrow-down" style="color: #9d9d9d"></span>
+                &nbsp
+            </button>
+        </div>
+        <div style="float: right;margin-right: 2%;margin-top: 20px">
+            <span id="pull_up2" class="glyphicon glyphicon-resize-small" style="color: red;font-size: 20px"></span>
         </div>
     </div>
     <div style="width: 85%;margin: 0 auto;background: white;clear: both;border: gainsboro solid 2px">
@@ -206,9 +227,19 @@
     /*切换学校分类栏的状态*/
     $("#school_choice").click(function () {
         $("#type_school").show();//显示
+        $("#dropdown_menu_choice").hide();//隐藏分类下拉菜单
+    })
+    $("#type_choice").click(function () {
+        $("#type_type").show();//显示
+        $("#dropdown_menu_choice").hide();//隐藏分类下拉菜单
     })
     $("#pull_up").click(function () {
         $("#type_school").hide();//隐藏
+        $("#dropdown_menu_choice").show();//显示分类下拉菜单
+    })
+    $("#pull_up2").click(function () {
+        $("#type_type").hide();//隐藏
+        $("#dropdown_menu_choice").show();//显示分类下拉菜单
     })
     $("#collect_sort_btn").click(function () {
         if($("#collect_sort_span").hasClass("glyphicon glyphicon-arrow-down")){
