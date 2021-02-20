@@ -35,9 +35,6 @@
         <input type="submit" name="forgetpwd" class="forgetpwd" value="忘记密码">
         </form>
       </span>
-        <br>
-        <br>
-        <br>
         <form id="SignInform" name="SigInForm" action="index.html" method="post">
             <!--表单主体内容 -->
             <div id="SignInform_table">
@@ -54,14 +51,20 @@
                     </tr>
                 </table>
             </div>
-            <br>
-            <br>
+
             <!--立即登录-->
             <div>
-                <input type="submit" name="signin" class="signin" value="立即登录">
+                <input id="submit_btn" type="button" name="signin" class="signin" value="立即登录">
             </div>
         </form>
     </div>
 </div>
 </body>
 </html>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $("#submit_btn").click(function () {
+        window.location.href="index.html"
+    })
+</script>
