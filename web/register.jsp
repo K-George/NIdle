@@ -33,10 +33,6 @@
         <input type="submit" name="signin" class="signin" value="直接登录">
         </form>
       </span>
-      <br>
-      <br>
-      <br>
-      <br>
       <form id="SignUpform" name="SignUpForm" action="index.html" method="post">
         <!--表单主体内容 -->
          <div id="SignUpform_table">
@@ -64,26 +60,32 @@
             <tr>
               <td>
 
-                <select name="provincename" id="provincenameid">
-                  <option value="0" selected="selected">请选择省</option>
+                <select name="provincename" id="prov" >
+                  <option value="0" selected="selected" >请选择省</option>
                 </select>省
-                <select name="cityname" id="citynameid">
-                  <option value="0" selected="selected">请选择市</option>
+                <select name="cityname" id="city" >
+                  <option value="0" selected="selected" >请选择市</option>
                 </select>市
-                <select>
-                  <option value="univerisityname" id="univerisity">请选择学校</option>
+                <select id="school" >
+                  <option value="univerisityname" >请选择学校</option>
                 </select>学校
               </td>
             </tr>
           </table>
          </div>
-        <br>
         <!--立即注册 -->
         <div>
-          <input type="submit" name="signup" class="signup" value="立即注册">
+          <input id="submit_btn" type="button" name="signup" class="signup" value="立即注册" >
         </div>
       </form>
     </div>
   </div>
 </body>
 </html>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+  $("#submit_btn").click(function () {
+    window.location.href="ReSetPassword.jsp"
+  })
+</script>
