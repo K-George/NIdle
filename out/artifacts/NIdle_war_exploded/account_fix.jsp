@@ -63,8 +63,8 @@
             <img src="img/img_user_center/1.jpg" class="round_icon"  alt="">
         </div>
         <form id="AddForm" action="" method="post">
-            <label for="addr-show">您的学校：
-                <input name="school-name" type="text" class="form-control" style="width: 180px;display: inline-block" value="" id="addr-show" onclick="display('school')">
+            <label for="school-show">您的学校：
+                <input name="school-name" type="text" class="form-control" style="width: 180px;display: inline-block" value="" id="school-show" onclick="display('school')">
             </label>
             <br />
             <div class="school" style="display: none;">
@@ -74,16 +74,16 @@
                 </select>
 
                 <!--城市选择-->
-                <select id="city" class="form-control" style="width: 120px;display: inline-block" onchange="showCountry(this)">
+                <select id="city" class="form-control" style="width: 120px;display: inline-block" onchange="showSchool(this)">
                     <option value="">请选择城市</option>
                 </select>
 
                 <!--学校选择-->
-                <select id="country" class="form-control" style="width: 200px;display: inline-block" onchange="selecCountry(this)">
+                <select id="school" class="form-control" style="width: 200px;display: inline-block" onchange="selecSchool(this)">
                     <option value="">请选择学校</option>
                 </select>
 
-                <button type="button" id="school-submit" class="btn met1" onClick="showAddr();hide('school')">确定</button>
+                <%--<button type="button" id="school-submit" class="btn met1" onClick="showAddr();hide('school')">确定</button>--%>
             </div>
         </form>
 
@@ -113,6 +113,8 @@
         </div>
     </div>
 </div>
+<script src="js/school.js"></script>
+<script src="js/school_select_method.js"></script>
 </body>
 <script type="text/javascript">
     function display(id) {
