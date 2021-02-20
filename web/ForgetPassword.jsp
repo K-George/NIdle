@@ -8,8 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>NIdle | 找回密码</title>
-    <link rel="stylesheet" href="css/ForgetPassword.css"/>
+    <title>NIdle | 忘记密码</title>
+    <link rel="stylesheet" href="css/SignIn.css"/>
     <link href="img/icon.ico" type="image/x-icon" rel="shortcut icon" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
@@ -27,15 +27,10 @@
 <div id="middle">
     <!-- 右侧登陆栏-->
     <div id="SU">
-      <span>
         <label>找回密码</label>
-      </span>
-        <br>
-        <br>
-        <br>
-        <form id="forgetpwdform" name="forgetpwdForm" action="index.html" method="post">
+        <form id="SignInform" name="SigInForm" action="index.html" method="post">
             <!--表单主体内容 -->
-            <div id="forgetpwdform_table">
+            <div id="SignInform_table">
                 <table>
                     <tr><!--昵称-->
                         <td>
@@ -44,19 +39,25 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" name="password" placeholder="密码">
+                            <input type="text" name="password" placeholder="验证码">
                         </td>
                     </tr>
                 </table>
             </div>
-            <br>
-            <br>
-            <!--立即登录-->
+
+            <!--找回密码-->
             <div>
-                <input type="submit" name="forgetpwd" id="forgetpwd" value="确定找回">
+                <input id="submit_btn" type="button" name="signin" class="signin" value="确认找回">
             </div>
         </form>
     </div>
 </div>
 </body>
 </html>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $("#submit_btn").click(function () {
+        window.location.href="ReSetPassword.jsp"
+    })
+</script>
