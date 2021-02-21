@@ -75,10 +75,17 @@
          </div>
         <!--立即注册 -->
         <div>
-          <input type="submit" name="signup" class="signup" value="立即注册" >
+          <input id="submit_btn" type="button" name="signup" class="signup" value="立即注册" >
         </div>
       </form>
     </div>
   </div>
 </body>
 </html>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+  $("#submit_btn").click(function () {
+    window.location.href="ReSetPassword.jsp"
+  })
+</script>
